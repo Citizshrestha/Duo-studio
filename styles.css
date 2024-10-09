@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PP mori";
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #edbfff;
+  z-index: 8;
+  border-radius: 50%;
+  position: fixed;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: background-image ease-in 0.5s;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 5px;
+  color: black;
+}
+
+#purple {
+  height: 100vh;
+  width: 100%;
+  background-color: #edbfff;
+  z-index: 100;
+  position: fixed;
+  opacity: 0;
+  display: none;
+  transition: opacity ease 1s;
+}
+
+#work {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+@keyframes workAnim {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#work h3 {
+  font-size: 2vw;
+  color: #111;
+  animation: workAnim 1.5s linear infinite;
+}
+
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  mix-blend-mode: difference;
+  z-index: 99;
+}
+
+.nav-part1 img {
+  padding: 10px 17px;
+}
+
+.nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-part2 a {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-part2 a:nth-child(1) {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-part3 .circle {
+  height: 20px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  padding-top: 5vw;
+}
+
+.page1 h1 {
+  font-size: 8vw;
+  font-weight: 300;
+  font-family: Montserrat;
+  margin-left: 15vw;
+}
+
+.page1 h2 {
+  font-size: 8vw;
+  font-weight: 300;
+  font-family: Montserrat;
+  margin-left: 20vw;
+}
+
+.page1 video {
+  width: 50%;
+  margin-top: 10vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.page2 {
+  min-height: 90vh;
+  width: 100%;
+  padding: 10px 10px;
+  border-bottom: 1.3px solid #111;
+  position: relative;
+  z-index: 9;
+}
+
+.page2 h1 {
+  font-size: 7vw;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 1.5vw;
+  margin-top: 3vw;
+  overflow: hidden;
+}
+
+.page2 h1 span {
+  display: inline-block;
+}
+
+.page2-left {
+  height: 350px;
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  margin-top: 4vw;
+  margin-left: 0.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page2-left h2 {
+  font-family: "Freight Big Pro";
+  font-size: 3.5vw;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.page2-right {
+  height: 400px;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 25%;
+  margin-right: 4vw;
+  margin-top: 4vw;
+}
+
+.page2-right p {
+  font-size: 2vw;
+  font-weight: 200;
+}
+
+.page2-right button {
+  font-size: 19px;
+  padding: 0.5vw 8.5vw;
+  border: none;
+  background-color: rgba(246, 148, 246, 0.667);
+  border-radius: 20px;
+}
+
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+.page3 h1 {
+  font-size: 7.5vw;
+  font-family: "League Spartan";
+  font-weight: 500;
+  padding-left: 4vw;
+  padding-top: 5vw;
+}
+
+.page3-part1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.page3-part1 #video1 {
+  height: 400px;
+  width: 500px;
+  margin-right: 5vw;
+}
+
+.page3-part1 #img1 {
+  height: 350px;
+  width: 500px;
+  margin-left: 4vw;
+  margin-top: 6vw;
+}
+
+.page3-part2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.page3-part2 #video2 {
+  height: 400px;
+  width: 500px;
+  margin-right: 5vw;
+}
+
+.page3-part2 #img2 {
+  height: 350px;
+  width: 500px;
+  margin-left: 4vw;
+  margin-top: 6vw;
+}
+
+.page4 {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  padding: 100px;
+}
+
+.elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.text-div {
+  height: 110px;
+  width: 35%;
+  overflow: hidden;
+}
+
+.elem:hover h1 {
+  transform: translateY(-100%);
+  color: #edbfff;
+}
+
+.elem:hover img {
+  opacity: 1;
+}
+
+.elem img {
+  position: absolute;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+}
+
+#elemimg1 {
+  left: 0%;
+  height: 300px;
+  width: 435px;
+}
+
+#elemimg2 {
+  right: 0%;
+  height: 325px;
+  width: 450px;
+}
+
+.text-div h1 {
+  color: #fff;
+  font-size: 7vw;
+  font-weight: 600;
+  transition: all ease 0.5s;
+}
+
+.page5 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  padding: 140px 100px;
+}
+
+.page5 h2 {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.box {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  border-top: 2px solid #dadada;
+}
+
+.box:nth-last-child(1) {
+  border-bottom: 2px solid #dadada;
+}
+
+.footer{
+  height: 40vh;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+}
+.footer h4{
+  font-size: 2vw;
+   text-transform: uppercase;
+margin-bottom: 4vw;
+   cursor: pointer;
+}
+
+@media (max-width: 600px)  {
+   .nav{
+    height: 80px;
+    width: 100%;
+    /* background-color: red; */
+   }
+   .nav img{
+    height: 50px;
+    margin-left: -15px;
+   }
+   .nav a{
+    font-size: 2.4vw;
+    font-weight: 600;
+   }
+   .circle{
+     padding-left: 0px 20px;
+   }
+   .page1 h1{
+      font-size: 7vw;
+      padding-left: 10vw;
+   }
+   .page1 h2{
+      font-size: 7vw;
+      margin-left: 10vw;
+   }
+   .page1 video{
+     margin-top: -32vw;
+    
+   }
+   .page1 {
+   
+    background-color: orange;
+   }
+   .page2 {
+    height: 20vw;
+    background-color: red;
+   }
+}
